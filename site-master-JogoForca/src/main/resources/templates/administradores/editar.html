@@ -1,0 +1,36 @@
+<div th:replace="compartilhado/topo"></div>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Administratores</h1>
+                    <p class="mb-4">Cadastre novo administrador
+
+                    </p>
+                    
+                    <div class="card shadow mb-4" style="padding: 30px;">
+                        <form method="post" action="/administradores/atualizar" onsubmit="return confirm('Confirma ação')">
+                          <input type="hidden" name="id" th:value="${administrador.id}">
+                          <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" th:value="${administrador.nome}">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" th:value="${administrador.email}">
+                          </div>
+                          <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" id="senha" name="senha" th:value="${administrador.senha}">
+                          </div>
+                          <div class="btn-group">
+                            <button type="submit"  class="btn btn-primary">Salvar</button>
+                            <a href="/administradores" class="btn btn-secondary">Cancelar</a>
+                          </div>
+                        </form>
+                      </div>
+                      
+<div th:replace="compartilhado/baixo"></div>
+
+           
