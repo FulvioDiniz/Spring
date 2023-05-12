@@ -13,6 +13,16 @@ public class HomeController {
         return "home/index";
     }
 
+    @GetMapping("/buttons")
+    public String buttons() {
+        return "home/buttons";
+    }
+
+    @GetMapping("/cards")
+    public String cards() {
+        return "home/cards";
+    }
+
 
     
 }
